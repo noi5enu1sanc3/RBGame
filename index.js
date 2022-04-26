@@ -30,6 +30,13 @@ let bCol;
 
 let opacity = 1;
 
+// function renderInitialElements () {
+//     controlsSq.style.display = 'none';
+//     controlsLe.classList.add('controls_state_centered_type_start');
+//     setRandomlColor(square);
+//     setRandomlColor(lense);
+// }
+
 function getRandomIntInclusive(min, max) {
     min = Math.ceil(min);
     max = Math.floor(max);
@@ -66,15 +73,18 @@ function showElement (element) {
 }
 
 function playGame () {
-    controlsSq.classList.add('controls_state_moving-out');
-    hideElement(controlsSq);
-    controlsLe.classList.add('controls_state_centered');
+   controlsSq.classList.add('controls_state_moving-out');
+   hideElement(controlsSq);
+   controlsLe.classList.add('controls_state_centered');
     hideElement(lense);
-    setSqColor()
+    setSqColor();
+    //setTimeout(setInputsOutputs, 4000, rInputSq, gInputSq, bInputSq, rOutputSq, gOutputSq, bOutputSq);
+    setInputsOutputs(rInputSq, gInputSq, bInputSq, rOutputSq, gOutputSq, bOutputSq);
 }
 
+
+
 function showResult () {
-    setInputsOutputs(rInputSq, gInputSq, bInputSq, rOutputSq, gOutputSq, bOutputSq);
     showElement(lense);
     controlsLe.classList.remove('controls_state_centered');
     controlsSq.classList.remove('controls_state_moving-out');
