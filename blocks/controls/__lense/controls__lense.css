@@ -1,0 +1,6 @@
+.controls__lense {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    transition: all 1s ease-in-out;
+}

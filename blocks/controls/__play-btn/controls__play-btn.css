@@ -1,0 +1,14 @@
+.controls__play-btn {
+    grid-column: 1/3;
+    grid-row: 1;
+    width: 200px;
+    height: 100px;
+    place-self: center;
+    border: none;
+    outline: none;
+    box-shadow: rgba(247,116,116, 0.45) 0px 25px 20px -20px;
+}
+
+.controls__play-btn:active {
+    box-shadow: rgba(247,116,116, 0.45) 0px -20px 30px -20px inset;
+}

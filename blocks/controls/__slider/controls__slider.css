@@ -1,0 +1,28 @@
+.controls__slider {
+    -webkit-appearance: none;
+    margin-right: 15px;
+    width: 200px;
+    height: 2px;
+    background: rgb(255, 255, 255);
+    border-radius: 5px;
+//background-image: linear-gradient(#8fb4c4, #3ed3c2);
+    background-size: 70% 100%;
+    background-repeat: no-repeat;
+}
+
+.controls__slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 20px;
+    width: 5px;
+    background: rgb(73,62,77);
+    cursor: default;
+    box-shadow: 0 0 2px 0 #555;
+    transition: background .3s ease-in-out;
+}
+
+.controls__slider::-webkit-slider-runnable-track  {
+    -webkit-appearance: none;
+    /*box-shadow: none;*/
+    /*border: none;*/
+    /*background: transparent;*/
+}

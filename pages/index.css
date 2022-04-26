@@ -1,0 +1,14 @@
+@import url(../blocks/root/root.css);
+
+@import url(../blocks/square/square.css);
+@import url(../blocks/lense/lense.css);
+
+@import url(../blocks/controls/controls.css);
+
+@import url(../blocks/controls/__lense/controls__lense.css);
+@import url(../blocks/controls/__square/controls__square.css);
+
+@import url(../blocks/controls/__play-btn/controls__play-btn.css);
+@import url(../blocks/controls/__result-btn/controls__result-btn.css);
+
+@import url(../blocks/controls/__slider/controls__slider.css);
