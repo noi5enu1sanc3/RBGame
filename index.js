@@ -88,8 +88,8 @@ function playGame () {
     controlsLe.classList.add('controls_state_centered');
     hideElement(lense);
     setSqColor();
-    //setTimeout(setInputsOutputs, 4000, rInputSq, gInputSq, bInputSq, rOutputSq, gOutputSq, bOutputSq);
-    setInputsOutputs(rInputSq, gInputSq, bInputSq, rOutputSq, gOutputSq, bOutputSq);
+    setTimeout(setInputsOutputs, 1000, rInputSq, gInputSq, bInputSq, rOutputSq, gOutputSq, bOutputSq);
+    //setInputsOutputs(rInputSq, gInputSq, bInputSq, rOutputSq, gOutputSq, bOutputSq);
     resetColors(lense, 0, rInputLe, gInputLe, bInputLe, rOutputLe, gOutputLe, bOutputLe);
 }
 
