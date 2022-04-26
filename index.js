@@ -70,11 +70,11 @@ function playGame () {
     hideElement(controlsSq);
     controlsLe.classList.add('controls_state_centered');
     hideElement(lense);
-    setSqColor();
-    setInputsOutputs(rInputSq, gInputSq, bInputSq, rOutputSq, gOutputSq, bOutputSq);
+    setSqColor()
 }
 
 function showResult () {
+    setInputsOutputs(rInputSq, gInputSq, bInputSq, rOutputSq, gOutputSq, bOutputSq);
     showElement(lense);
     controlsLe.classList.remove('controls_state_centered');
     controlsSq.classList.remove('controls_state_moving-out');
