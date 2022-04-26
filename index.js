@@ -37,6 +37,16 @@ let opacity = 1;
 //     setRandomlColor(lense);
 // }
 
+function resetColors (element, color, rInput, gInput, bInput, rOutput, gOutput, bOutput) {
+    element.style.backgroundColor = `rgb(${color}, ${color}, ${color})`;
+    rInput.value = color;
+    gInput.value = color;
+    bInput.value = color;
+    rOutput.textContent = color;
+    gOutput.textContent = color;
+    bOutput.textContent = color;
+}
+
 function getRandomIntInclusive(min, max) {
     min = Math.ceil(min);
     max = Math.floor(max);
@@ -73,13 +83,14 @@ function showElement (element) {
 }
 
 function playGame () {
-   controlsSq.classList.add('controls_state_moving-out');
-   hideElement(controlsSq);
-   controlsLe.classList.add('controls_state_centered');
+    controlsSq.classList.add('controls_state_moving-out');
+    hideElement(controlsSq);
+    controlsLe.classList.add('controls_state_centered');
     hideElement(lense);
     setSqColor();
     //setTimeout(setInputsOutputs, 4000, rInputSq, gInputSq, bInputSq, rOutputSq, gOutputSq, bOutputSq);
     setInputsOutputs(rInputSq, gInputSq, bInputSq, rOutputSq, gOutputSq, bOutputSq);
+    resetColors(lense, 0, rInputLe, gInputLe, bInputLe, rOutputLe, gOutputLe, bOutputLe);
 }
 
 
