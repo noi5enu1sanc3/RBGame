@@ -1,5 +1,7 @@
-const house = document.querySelector('.images__house');
-const graffiti = document.querySelector('.images__paint');
+const imagesContainer = document.querySelector('.images');
+
+const house = imagesContainer.querySelector('.images__house');
+const graffiti = imagesContainer.querySelector('.images__paint');
 
 const controlsHouse = document.querySelector('.controls__house');
 const controlsGraffiti = document.querySelector('.controls__paint');
@@ -19,6 +21,8 @@ const bOutputGraffiti = controlsGraffiti.querySelector('.slider__outputB-paint')
 const rInputGraffiti = controlsGraffiti.querySelector('#numberInputR_paint');
 const gInputGraffiti = controlsGraffiti.querySelector('#numberInputG_paint');
 const bInputGraffiti = controlsGraffiti.querySelector('#numberInputB_paint');
+
+const miliciya = imagesContainer.querySelector('.images__miliciya');
 
 const playButton = document.querySelector('.controls__play-btn');
 const resultButton = document.querySelector('.controls__result-btn');
@@ -110,8 +114,19 @@ const setHouseColor = () => {
     house.style.backgroundColor = `rgb(${rCol}, ${gCol}, ${bCol})`;
 }
 
+function addVibrateAnimation (element) {
+    element.classList.add('vibrate');
+}
+
+function removeVibrateAnimation (element) {
+    element.classList.remove('vibrate');
+}
+
 playButton.addEventListener('click', playGame);
 resultButton.addEventListener('click', showResult);
+
+resultButton.addEventListener('click', () => addVibrateAnimation(miliciya));
+playButton.addEventListener('click', () => removeVibrateAnimation(miliciya));
 
 rInputGraffiti.addEventListener('change', setGraffitiColor);
 gInputGraffiti.addEventListener('change', setGraffitiColor);

@@ -27,3 +27,5 @@
 @import url(../blocks/controls/__result-btn/controls__result-btn.css);
 
 @import url(../blocks/controls/__slider/controls__slider.css);
+
+@import url(../blocks/animation/vibrate.css);
