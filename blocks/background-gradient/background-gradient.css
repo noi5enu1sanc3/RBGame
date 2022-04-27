@@ -1,7 +1,6 @@
 .background-gradient {
     background: rgb(62, 70, 73);
     background: linear-gradient(4deg, rgba(244,155,155,0.1) 0%, rgba(35,107,133,0.1) 100%);
-    background-color: rgba(0, 0, 0, .1);
     position: fixed;
     top: 50%;
     left: 50%;
