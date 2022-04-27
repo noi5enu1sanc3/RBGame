@@ -21,7 +21,6 @@
     background-size: cover;
     -webkit-clip-path: url(#my-clip-path);
     clip-path: url(#my-clip-path);
-    overflow: visible;
     /*display: flex;*/
     /*justify-content: center;*/
     /*align-items: center;*/
