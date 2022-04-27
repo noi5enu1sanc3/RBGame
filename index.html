@@ -8,9 +8,24 @@
     <link rel="stylesheet" href="pages/index.css">
 </head>
 <body class="root">
+<!--    <div class="square">-->
+<!--        <div class="lense"></div>-->
+<!--    </div>-->
+
+<div class="wrapper">
+    <svg class="svg">
+        <clipPath id="my-clip-path" clipPathUnits="objectBoundingBox"><path d="M0.468,0.001 l0.494,0.222 v0.038 H0.932 v0.235 h0.068 v0.083 h-0.066 V0.957 h0.034 v0.044 H0 V0.957 h0.031 V0.266 H0 v-0.043"></path></clipPath>
+    </svg>
+    <svg class="svglense">
+        <clipPath id="my-clip-path-lense" clipPathUnits="objectBoundingBox"><path d="M0.032,0.082 l0.336,-0.047 v0.08 H0.709 V0.035 h0.255 V0.523 h0.036 V0.932 H0.487 l0.001,-0.082 H0.413 l-0.002,0.151,-0.394,-0.038 V0.798 H0.116 l-0.01,-0.281 H0 V0"></path></clipPath>
+    </svg>
     <div class="square">
+        <img  class="graffiti" src="Asset%203.svg" alt="">
         <div class="lense"></div>
     </div>
+    <img class="commun" src="photo-2021-09-08-11-56-35-removebg-preview.png" alt="">
+</div>
+
     <div class="controls">
         <button class="controls__play-btn">Play</button>
         <button class="controls__result-btn">Compare</button>
@@ -36,6 +51,7 @@
             <input class="controls__slider" type="range" name="numberInputB_lense" id="numberInputB_lense" min="0" max="255" value="255">
         </div>
     </div>
-    <script src="script/index.js"></script>
+
+<script src="script/index.js"></script>
 </body>
 </html>

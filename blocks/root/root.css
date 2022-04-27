@@ -1,9 +1,11 @@
 .root {
+    position: relative;
     margin: 0;
     width: 100vw;
     height: 100vh;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: rgb(210,213,223);
+    //background-color: rgb(210,213,223);
+    background-image: url('../../Untitled-3.jpg');
 }
