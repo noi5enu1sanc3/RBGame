@@ -1,0 +1,12 @@
+.images__paint {
+    position: absolute;
+    top: 230px;
+    left: 150px;
+    width: 280px;
+    height: 150px;
+    background-color: rgb(255, 255, 255);
+    background-size: cover;
+    background-position: center;
+    -webkit-clip-path: url(#my-clip-path-lense);
+    clip-path: url(#my-clip-path-lense);
+}

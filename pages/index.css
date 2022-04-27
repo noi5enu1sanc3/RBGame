@@ -1,12 +1,24 @@
 @import url(../blocks/root/root.css);
 
-@import url(../blocks/square/square.css);
-@import url(../blocks/lense/lense.css);
+@import url(../blocks/page/page.css);
+
+@import url(../blocks/background-gradient/background-gradient.css);
+
+@import url(../blocks/svg-clip-path/svg-clip-path.css);
+
+@import url(../blocks/images/images.css);
+
+@import url(../blocks/images/__house/images__house.css);
+@import url(../blocks/images/__paint/images__paint.css);
+@import url(../blocks/images/__graffiti/images__graffiti.css);
+
+@import url(../blocks/images/__kommunalschik/images__kommunalschik.css);
+@import url(../blocks/images/__miliciya/images__miliciya.css);
 
 @import url(../blocks/controls/controls.css);
 
-@import url(../blocks/controls/__lense/controls__lense.css);
-@import url(../blocks/controls/__square/controls__square.css);
+@import url(../blocks/controls/__paint/controls__paint.css);
+@import url(../blocks/controls/__house/controls__house.css);
 
 @import url(../blocks/controls/_state/controls_state_centered.css);
 @import url(../blocks/controls/_state/controls_state_moving-out.css);

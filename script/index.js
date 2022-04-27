@@ -1,24 +1,24 @@
-const square = document.querySelector('.square');
-const lense = document.querySelector('.lense');
+const house = document.querySelector('.images__house');
+const graffiti = document.querySelector('.images__paint');
 
-const controlsSquare = document.querySelector('.controls__square');
-const controlsLense = document.querySelector('.controls__lense');
+const controlsHouse = document.querySelector('.controls__house');
+const controlsGraffiti = document.querySelector('.controls__paint');
 
-const rInputSquare = controlsSquare.querySelector('#numberInputR_square');
-const gInputSquare = controlsSquare.querySelector('#numberInputG_square');
-const bInputSquare = controlsSquare.querySelector('#numberInputB_square');
+const rInputHouse = controlsHouse.querySelector('#numberInputR_house');
+const gInputHouse = controlsHouse.querySelector('#numberInputG_house');
+const bInputHouse = controlsHouse.querySelector('#numberInputB_house');
 
-const rOutputSquare = controlsSquare.querySelector('.slider__outputR-sq');
-const gOutputSquare = controlsSquare.querySelector('.slider__outputG-sq');
-const bOutputSquare = controlsSquare.querySelector('.slider__outputB-sq');
+const rOutputHouse = controlsHouse.querySelector('.slider__outputR-house');
+const gOutputHouse = controlsHouse.querySelector('.slider__outputG-house');
+const bOutputHouse = controlsHouse.querySelector('.slider__outputB-house');
 
-const rOutputLense = controlsLense.querySelector('.slider__outputR-le');
-const gOutputLense = controlsLense.querySelector('.slider__outputG-le');
-const bOutputLense = controlsLense.querySelector('.slider__outputB-le');
+const rOutputGraffiti = controlsGraffiti.querySelector('.slider__outputR-paint');
+const gOutputGraffiti = controlsGraffiti.querySelector('.slider__outputG-paint');
+const bOutputGraffiti = controlsGraffiti.querySelector('.slider__outputB-paint');
 
-const rInputLense = controlsLense.querySelector('#numberInputR_lense');
-const gInputLense = controlsLense.querySelector('#numberInputG_lense');
-const bInputLense = controlsLense.querySelector('#numberInputB_lense');
+const rInputGraffiti = controlsGraffiti.querySelector('#numberInputR_paint');
+const gInputGraffiti = controlsGraffiti.querySelector('#numberInputG_paint');
+const bInputGraffiti = controlsGraffiti.querySelector('#numberInputB_paint');
 
 const playButton = document.querySelector('.controls__play-btn');
 const resultButton = document.querySelector('.controls__result-btn');
@@ -44,7 +44,7 @@ function getRandomIntInclusive(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min; //Max and min included
 }
 
-function setRandomlColor (element) {
+function setRandomColor (element) {
     rCol = getRandomIntInclusive(0, 255);
     gCol = getRandomIntInclusive(0, 255);
     bCol = getRandomIntInclusive(0, 255);
@@ -61,8 +61,8 @@ function setInputsOutputs (rInput, gInput, bInput, rOutput, gOutput, bOutput) {
     bOutput.textContent = bCol;
 }
 
-const setSquareColor = () => {
-    setRandomlColor(square);
+const setRandomHouseColor = () => {
+    setRandomColor(house);
 }
 
 function hideElement (element) {
@@ -74,35 +74,49 @@ function showElement (element) {
 }
 
 function playGame () {
-    controlsSquare.classList.add('controls_state_moving-out');
-    hideElement(controlsSquare);
-    controlsLense.classList.add('controls_state_centered');
-    hideElement(lense);
-    setSquareColor();
-    setTimeout(setInputsOutputs, 1000, rInputSquare, gInputSquare, bInputSquare, rOutputSquare, gOutputSquare, bOutputSquare);
-    resetColors(lense, 0, rInputLense, gInputLense, bInputLense, rOutputLense, gOutputLense, bOutputLense);
+    controlsHouse.classList.add('controls_state_moving-out');
+    hideElement(controlsHouse);
+    controlsGraffiti.classList.add('controls_state_centered');
+    hideElement(graffiti);
+    setRandomHouseColor();
+    setTimeout(setInputsOutputs, 1000, rInputHouse, gInputHouse, bInputHouse, rOutputHouse, gOutputHouse, bOutputHouse);
+    resetColors(graffiti, 0, rInputGraffiti, gInputGraffiti, bInputGraffiti, rOutputGraffiti, gOutputGraffiti, bOutputGraffiti);
 }
 
 function showResult () {
-    showElement(lense);
-    controlsLense.classList.remove('controls_state_centered');
-    controlsSquare.classList.remove('controls_state_moving-out');
-    showElement(controlsSquare);
+    showElement(graffiti);
+    controlsGraffiti.classList.remove('controls_state_centered');
+    controlsHouse.classList.remove('controls_state_moving-out');
+    showElement(controlsHouse);
 }
 
-const SetLenseColor = () => {
-    rCol = rInputLense.value;
-    gCol = gInputLense.value;
-    bCol = bInputLense.value;
-    rOutputLense.textContent = rInputLense.value;
-    gOutputLense.textContent = gInputLense.value;
-    bOutputLense.textContent = bInputLense.value;
-    lense.style.backgroundColor = `rgb(${rCol}, ${gCol}, ${bCol})`;
+const setGraffitiColor = () => {
+    rCol = rInputGraffiti.value;
+    gCol = gInputGraffiti.value;
+    bCol = bInputGraffiti.value;
+    rOutputGraffiti.textContent = rInputGraffiti.value;
+    gOutputGraffiti.textContent = gInputGraffiti.value;
+    bOutputGraffiti.textContent = bInputGraffiti.value;
+    graffiti.style.backgroundColor = `rgb(${rCol}, ${gCol}, ${bCol})`;
+}
+
+const setHouseColor = () => {
+    rCol = rInputHouse.value;
+    gCol = gInputHouse.value;
+    bCol = bInputHouse.value;
+    rOutputHouse.textContent = rInputHouse.value;
+    gOutputHouse.textContent = gInputHouse.value;
+    bOutputHouse.textContent = bInputHouse.value;
+    house.style.backgroundColor = `rgb(${rCol}, ${gCol}, ${bCol})`;
 }
 
 playButton.addEventListener('click', playGame);
 resultButton.addEventListener('click', showResult);
 
-rInputLense.addEventListener('change', SetLenseColor);
-gInputLense.addEventListener('change', SetLenseColor);
-bInputLense.addEventListener('change', SetLenseColor);
+rInputGraffiti.addEventListener('change', setGraffitiColor);
+gInputGraffiti.addEventListener('change', setGraffitiColor);
+bInputGraffiti.addEventListener('change', setGraffitiColor);
+
+rInputHouse.addEventListener('change', setHouseColor);
+gInputHouse.addEventListener('change', setHouseColor);
+bInputHouse.addEventListener('change', setHouseColor);

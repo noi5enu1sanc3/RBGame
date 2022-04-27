@@ -1,0 +1,8 @@
+.page {
+    max-width: 1280px;
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+

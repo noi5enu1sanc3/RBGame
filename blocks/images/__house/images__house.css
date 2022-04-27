@@ -1,0 +1,9 @@
+.images__house {
+    position: relative;
+    width: 600px;
+    height: 450px;
+    background-color: rgb(0, 0, 0);
+    background-size: cover;
+    -webkit-clip-path: url(#my-clip-path);
+    clip-path: url(#my-clip-path);
+}

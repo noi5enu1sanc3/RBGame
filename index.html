@@ -1,57 +1,58 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Title</title>
+    <title>РБГ</title>
     <link rel="stylesheet" href="pages/index.css">
 </head>
 <body class="root">
-<!--    <div class="square">-->
-<!--        <div class="lense"></div>-->
-<!--    </div>-->
+<div class="background-gradient">
+    <div class="page">
+        <div class="images">
+            <div class="images__house">
+                <img  class="images__graffiti" src="graffiti.svg" alt="">
+                <div class="images__paint"></div>
+            </div>
+            <img class="images__kommunalschik" src="kommunalschik.png" alt="">
+            <img class="images__miliciya" src="miliciya.png" alt="">
+        </div>
 
-<div class="wrapper">
-    <svg class="svg">
-        <clipPath id="my-clip-path" clipPathUnits="objectBoundingBox"><path d="M0.468,0.001 l0.494,0.222 v0.038 H0.932 v0.235 h0.068 v0.083 h-0.066 V0.957 h0.034 v0.044 H0 V0.957 h0.031 V0.266 H0 v-0.043"></path></clipPath>
-    </svg>
-    <svg class="svglense">
-        <clipPath id="my-clip-path-lense" clipPathUnits="objectBoundingBox"><path d="M0.032,0.082 l0.336,-0.047 v0.08 H0.709 V0.035 h0.255 V0.523 h0.036 V0.932 H0.487 l0.001,-0.082 H0.413 l-0.002,0.151,-0.394,-0.038 V0.798 H0.116 l-0.01,-0.281 H0 V0"></path></clipPath>
-    </svg>
-    <div class="square">
-        <img  class="graffiti" src="Asset%203.svg" alt="">
-        <div class="lense"></div>
+        <div class="controls">
+            <button class="controls__play-btn">Красить</button>
+            <button class="controls__result-btn">Отчитаться</button>
+            <div class="controls__house">
+                <label for="numberInputR_house">R <span class="slider__outputR-house"></span> </label>
+                <input class="controls__slider" id="numberInputR_house" max="255" min="0" name="numberInputR_square" type="range" value="0">
+
+                <label for="numberInputG_house">G <span class="slider__outputG-house"></span> </label>
+                <input class="controls__slider" type="range" name="numberInputG_house" id="numberInputG_house" min="0" max="255" value="0">
+
+                <label for="numberInputB_house">B <span class="slider__outputB-house"></span> </label>
+                <input class="controls__slider" type="range" name="numberInputB_house" id="numberInputB_house" min="0" max="255" value="0">
+            </div>
+
+            <div class="controls__paint">
+                <label for="numberInputR_paint">R <span class="slider__outputR-paint"></span> </label>
+                <input class="controls__slider" type="range" name="numberInputR_paint" id="numberInputR_paint" min="0" max="255" value="255">
+
+                <label for="numberInputG_paint">G <span class="slider__outputG-paint"></span> </label>
+                <input class="controls__slider" type="range" name="numberInputG_paint" id="numberInputG_paint" min="0" max="255" value="255">
+
+                <label for="numberInputB_paint">B <span class="slider__outputB-paint"></span> </label>
+                <input class="controls__slider" type="range" name="numberInputB_paint" id="numberInputB_paint" min="0" max="255" value="255">
+            </div>
+        </div>
     </div>
-    <img class="commun" src="kommunalschik.png" alt="">
-    <img class="miliciya" src="miliciya.png" alt="">
 </div>
 
-    <div class="controls">
-        <button class="controls__play-btn">Красить</button>
-        <button class="controls__result-btn">Отчитаться</button>
-        <div class="controls__square">
-            <label for="numberInputR_square">R <span class="slider__outputR-sq"></span> </label>
-            <input class="controls__slider" id="numberInputR_square" max="255" min="0" name="numberInputR_square" type="range" value="0">
-
-            <label for="numberInputG_square">G <span class="slider__outputG-sq"></span> </label>
-            <input class="controls__slider" type="range" name="numberInputG_square" id="numberInputG_square" min="0" max="255" value="0">
-
-            <label for="numberInputB_square">B <span class="slider__outputB-sq"></span> </label>
-            <input class="controls__slider" type="range" name="numberInputB_square" id="numberInputB_square" min="0" max="255" value="0">
-        </div>
-
-        <div class="controls__lense">
-            <label for="numberInputR_lense">R <span class="slider__outputR-le"></span> </label>
-            <input class="controls__slider" type="range" name="numberInputR_lense" id="numberInputR_lense" min="0" max="255" value="255">
-
-            <label for="numberInputG_lense">G <span class="slider__outputG-le"></span> </label>
-            <input class="controls__slider" type="range" name="numberInputG_lense" id="numberInputG_lense" min="0" max="255" value="255">
-
-            <label for="numberInputB_lense">B <span class="slider__outputB-le"></span> </label>
-            <input class="controls__slider" type="range" name="numberInputB_lense" id="numberInputB_lense" min="0" max="255" value="255">
-        </div>
-    </div>
+<svg class="svg">
+    <clipPath id="my-clip-path" clipPathUnits="objectBoundingBox"><path d="M0.468,0.001 l0.494,0.222 v0.038 H0.932 v0.235 h0.068 v0.083 h-0.066 V0.957 h0.034 v0.044 H0 V0.957 h0.031 V0.266 H0 v-0.043"></path></clipPath>
+</svg>
+<svg class="svg">
+    <clipPath id="my-clip-path-lense" clipPathUnits="objectBoundingBox"><path d="M0.032,0.082 l0.336,-0.047 v0.08 H0.709 V0.035 h0.255 V0.523 h0.036 V0.932 H0.487 l0.001,-0.082 H0.413 l-0.002,0.151,-0.394,-0.038 V0.798 H0.116 l-0.01,-0.281 H0 V0"></path></clipPath>
+</svg>
 
 <script src="script/index.js"></script>
 </body>

@@ -7,9 +7,10 @@
     border: none;
     outline: none;
     font-size: 20px;
-    box-shadow: rgba(247,116,116, 0.45) 0px 25px 20px -20px;
+    opacity: .8;
+    box-shadow: rgba(247,116,116, 0.55) 0px 30px 20px -20px;
 }
 
 .controls__play-btn:active {
-    box-shadow: rgba(247,116,116, 0.45) 0px -20px 30px -20px inset;
+    box-shadow: rgba(247,116,116, 0.55) 0px -70px 30px -20px inset;
 }
