@@ -8,6 +8,9 @@
 @import url(../blocks/controls/__lense/controls__lense.css);
 @import url(../blocks/controls/__square/controls__square.css);
 
+@import url(../blocks/controls/_state/controls_state_centered.css);
+@import url(../blocks/controls/_state/controls_state_moving-out.css);
+
 @import url(../blocks/controls/__play-btn/controls__play-btn.css);
 @import url(../blocks/controls/__result-btn/controls__result-btn.css);
 
